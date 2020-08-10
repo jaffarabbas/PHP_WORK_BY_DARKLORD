@@ -22,19 +22,22 @@ class first implements firstinterface{
 class reff{
     var $num1;
     var $num2;
-    public function __construct($num,$num2){
+    public function reff($num,$num2){
         $this->num1 = $num;
         $this->num2 = $num2;
-        echo $this->$num1,$this->$num2,"First contructer";
+        echo $this->num1,$this->num2,"First contructer";
     }
 } 
 class pop extends reff{
     public function pop(){
-        __construct::__construct(2,3);
+        reff::reff(2,3);
         echo "second contructer";
     }
 }
 $obj = new first;
 echo "hello : ",$obj->sum(3),"</br>";
 $obj->check();
+
+$obj2 = new pop;
+
 ?>

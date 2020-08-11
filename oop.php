@@ -34,10 +34,24 @@ class pop extends reff{
         echo "second contructer";
     }
 }
+
+abstract class onn{
+    function ec(){
+        echo "ab";
+    }
+    abstract function ch();
+}
+
+class native extends onn{
+    public function ch(){
+        echo "abstract method";
+    }
+}
 $obj = new first;
 echo "hello : ",$obj->sum(3),"</br>";
 $obj->check();
 
 $obj2 = new pop;
-
+$newm = new native;
+$newm->ch();
 ?>
